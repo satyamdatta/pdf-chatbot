@@ -60,8 +60,8 @@ async def upload_pdf(file: UploadFile = File(...)):
     documents = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
+        chunk_size=300,
+        chunk_overlap=50
     )
 
     chunks = text_splitter.split_documents(documents)
