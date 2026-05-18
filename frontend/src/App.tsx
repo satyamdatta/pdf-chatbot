@@ -42,7 +42,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/upload", {
+      const response = await fetch("https://pdf-chatbot-backend-ugxb.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -78,7 +78,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/ask", {
+      const response = await fetch("https://pdf-chatbot-backend-ugxb.onrender.com/ask", {
         method: "POST",
 
         headers: {
