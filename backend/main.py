@@ -7,7 +7,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from langchain_community.vectorstores import FAISS
 
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import FakeEmbeddings
 
 from langchain_groq import ChatGroq
 
@@ -37,9 +37,7 @@ llm = ChatGroq(
 
 # ================= EMBEDDINGS =================
 
-embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+embedding_model = FakeEmbeddings(size=384)
 
 # ================= GLOBAL VECTORSTORE =================
 
